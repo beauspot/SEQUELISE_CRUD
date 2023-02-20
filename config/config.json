@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "beau",
+    "password": "b1058019",
+    "database": "traversy_project",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

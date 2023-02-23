@@ -4,7 +4,7 @@ const gigsController = require("../controller/appCtrls");
 
 router.get("/", gigsController.getAllGigs);
 
-router.post("/", gigsController.CreateGigs);
+router.post("/add", gigsController.CreateGigs);
 
 router.get("/:id", gigsController.get_a_single_gig);
 

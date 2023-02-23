@@ -2,7 +2,8 @@ const express = require("express");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 require("dotenv").config();
-const exphbs = require("express-handlebars");
+
+
 const appRouter = require("./routes/appRoutes");
 const _404ErrorRoute = require("./middleware/_404_Error");
 const { sequelize } = require("./models");

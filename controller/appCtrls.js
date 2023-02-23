@@ -39,7 +39,7 @@ exports.get_a_single_gig = wrappers.asyncWrapper(async (req, res, next) => {
   }
 });
 
-exports.updateAGig = wrappers.asyncWrapper(async (req, res) => {
+exports.updateAGig = wrappers.asyncWrapper(async (req, res, next) => {
   const { id } = req.params;
   const { title, technologies, budget, description, contact_email } = req.body;
   const updateGig = await Model.GigsModel.findByPk(id);
@@ -58,7 +58,7 @@ exports.updateAGig = wrappers.asyncWrapper(async (req, res) => {
   }
 });
 
-exports.deleteAGig = wrappers.asyncWrapper(async (req, res) => {
+exports.deleteAGig = wrappers.asyncWrapper(async (req, res, next) => {
   const { id } = req.params;
   const deleteGig = await Model.GigsModel.findByPk(id);
   if (deleteGig) {

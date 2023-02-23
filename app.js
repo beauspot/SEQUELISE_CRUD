@@ -1,8 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
-const bodyParser = require("body-parser");
 require("dotenv").config();
-
 
 const appRouter = require("./routes/appRoutes");
 const _404ErrorRoute = require("./middleware/_404_Error");
@@ -11,6 +9,7 @@ const { sequelize } = require("./models");
 const app = express();
 
 app.use(express.json());
+app.use(logger("dev"));
 
 app.use("/gigs", appRouter);
 
